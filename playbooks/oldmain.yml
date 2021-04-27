@@ -1,0 +1,11 @@
+---
+- name: Playfacebook
+  hosts: host1
+  remote_user: root
+  tasks:
+    - name: Installer vim
+      apt:
+         name: vim
+         state: present
+
+## ansible-playbook playbooks/main.yml --diff
