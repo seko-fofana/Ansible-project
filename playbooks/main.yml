@@ -1,15 +1,14 @@
 ---
 - hosts: webserver
   remote_user: root
+  vars_files:
+        - "./vars/{{env}}_vars.yml"
   tasks:
   - name: debug
     debug: 
-      msg: "Bonjour ici l'environnement"
+      msg: "Bonjour ici l'environnement {{env}} "
 
-- hosts: dbserver
-  remote_user: root
-  tasks:
-  - name: "ensure is intalled"
+  - name:  vim installation/desinstallation
     apt:
       name: vim
-      state: present
+      state: "{{vim_state}}"
