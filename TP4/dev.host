@@ -1,7 +1,5 @@
----
 [webserver]
 host1
-host3
 
 [all:vars]
 env="dev"
