@@ -9,9 +9,18 @@
             debug:
                     msg: "Bonjour ici l'environnement {{env}}"
 
-          - name: "création user"
+          - name: "Pour créer un utilisateur"
             when : ansible_distribution == "Ubuntu"
             user:
-                 name:"{{item.name}}"
-                 password: "{{ttem.name}}"
+                 name: "{{item.name}}"
+                 password: "{{item.password}}"
                  state: present
+
+            loop:
+                  - name: user1
+                    password: mdp_user1
+                  - name: user2
+                    password: mdp_user2
+                  - name: "{{name3}}"
+                    password: "{{stockpswd}}"
+
