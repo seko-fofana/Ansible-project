@@ -1,0 +1,7 @@
+[webserver]
+host2
+host1
+
+[all:vars]
+env="int"
+

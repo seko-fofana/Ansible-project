@@ -1,0 +1,5 @@
+--- 
+vim_state: "absent"
+user_state: "present"
+name3: seko
+stockpswd: "{{ 'passwd_seko' | password_hash('md5')}}"

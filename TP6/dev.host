@@ -1,0 +1,6 @@
+[webserver]
+host1
+host2
+
+[all:vars]
+env="dev"
