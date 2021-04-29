@@ -1,6 +1,6 @@
 [webserver]
 host2
-host4
+host1
 
 [all:vars]
 env="int"
