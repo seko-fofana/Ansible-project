@@ -16,3 +16,50 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ff02::3 ip6-allhosts
 
+#Connexion entre Ansible et les deux containers
+
+Connexion_check.txt  Dockerfile  README.md  dev.host  playbooks
+root@Ansible-controller:/home/azureuser/ansible/ansible_lamp# ansible all -m ping
+172.17.0.5 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+172.17.0.2 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+172.17.0.6 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+172.17.0.4 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+172.17.0.3 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+172.17.0.7 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+
