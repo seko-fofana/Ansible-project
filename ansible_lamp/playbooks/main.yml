@@ -1,0 +1,22 @@
+---
+ -name : apache
+  hosts: webserver
+ user: root
+ roles:
+     -role : apache
+     -role : user
+
+ -name : PHP
+  hosts: webserver
+ user: root
+ roles:
+     -role : apache
+     -role : user
+
+ -name : Mysql
+  hosts: dbserver 
+ user: root
+ role:
+     -role : apache
+     -role : user
+
